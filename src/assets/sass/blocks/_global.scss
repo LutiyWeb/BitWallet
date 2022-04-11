@@ -1,0 +1,283 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+
+body.block-scroll {
+    overflow: hidden;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+body {
+    font-family     : 'Museo Sans Cyrl 500';
+    font-weight     : 500;
+    letter-spacing: 0.04em;
+    line-height: 1.8em;
+    color           : #000;
+    font-size       : 15px;
+    background-color: #fff;
+    margin          : 0;
+    padding         : 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p {
+    margin : 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Museo Sans Cyrl 900';
+    line-height: 120%;
+    // font-weight: 300;
+}
+
+h1 {
+    font-size: 46px;
+}
+
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+ul,
+li {
+    margin    : 0;
+    padding   : 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color          : inherit;
+    display        : inline-block;
+}
+
+.wrapper {
+    display       : flex;
+    flex-direction: column;
+    min-height    : 100%;
+    overflow      : hidden;
+}
+
+.page {
+    flex: 1 0 auto;
+}
+
+
+.container {
+    margin   : 0 auto;
+    width    : 100%;
+    max-width: 1400px;
+    padding  : 0 15px;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+._img-resp {
+    max-width : 100%;
+    height    : auto;
+    object-fit: cover;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding:0;
+    margin: 0;
+    cursor          : pointer;
+    background-color: transparent;
+    border          : none;
+    outline         : none;
+    color           : inherit;
+}
+
+
+textarea,
+input {
+    background-color: transparent;
+    border          : none;
+    outline         : none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.main-btn {
+   
+}
+
+
+.main-btn:hover {
+
+}
+
+.main-btn:focus {
+    
+}
+
+.decor-line {
+    position  : relative;
+    transition: all .6s;
+
+    &::after {
+        content   : '';
+        width     : 100%;
+        height    : 1px;
+        background: linear-gradient(90deg, #FFFFFF -1.79%, rgba(255, 255, 255, 0) 90%);
+        position  : absolute;
+        bottom    : -10px;
+        left      : 0;
+        z-index   : 2;
+        transition: all .6s;
+    }
+}
+
+// pop-up----------------------------------------------------
+
+/* Важная часть */
+.popup__bg {
+    position       : fixed;
+    top            : 0;
+    left           : 0;
+    width          : 100%;
+    height         : 100vh;
+    background     : linear-gradient(126.6deg, rgba(0, 0, 0, 0.52) 28.69%, rgba(0, 0, 0, 0.52) 100%);
+    backdrop-filter: blur(18px);
+    opacity        : 0; // Скрываем фон и сам попап
+    pointer-events : none; // Запрещаем ему быть целью событий
+    transition     : 0.5s all;
+    z-index        : 230;
+    overflow       : auto;
+}
+
+.popup__bg.active {
+    // При добавлении класса 'active'
+    opacity       : 1; // Показываем фон и попап
+    pointer-events: all; // Возвращаем события
+    transition    : 0.5s all;
+}
+
+.popup-inner {
+    top          : 0;
+    left         : 50%;
+    transform    : translate(-50% 0) scale(0); // Центрируем и масштабируем в 0 само окно
+    width        : 712px;
+    height       : 280px;
+    position     : relative;
+    background   : var(--thirty_bg);
+    border-radius: 8px;
+    padding      : 15px 0;
+    transition   : 0.5s all;
+    z-index      : 250;
+    overflow     : hidden;
+}
+
+.popup-inner.active {
+    transform: translate(-50%, 0) scale(1); // Так же центрируем и плавно увеличиваем
+}
+
+.popup-title {
+
+}
+
+.popup-subtitle {
+
+}
+
+/* Конец важной части */
+/* Далее код для стилизации формы */
+.close-popup {
+    position: absolute;
+    top     : 4px;
+    right   : 20px;
+    cursor  : pointer;
+    z-index : 60;
+}
+
+// .pop-up {
+//     opacity       : 0;
+//     visibility    : hidden;
+//     pointer-events: none;
+
+//     &.show {
+//         opacity       : 1;
+//         visibility    : visible;
+//         pointer-events: all;
+//     }
+// }
+
+._fluid-img {
+    position: relative;
+
+    img {
+        position  : absolute;
+        top       : 0;
+        left      : 0;
+        z-index   : 10;
+        width     : 100%;
+        height    : 100%;
+        object-fit: cover;
+    }
+}
+
+/* ===== Scrollbar CSS ===== */
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width    : 6px;
+    height   : 6px;
+    transform: translate(-20px, 0);
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--accent_color);
+    border-radius   : 30px;
+}
+
+/* Chrome, Edge, and Safari */

@@ -1,0 +1,23 @@
+
+.info__img {
+    width: 553px;
+    height: 400px;
+    margin-right: 30px;
+}
+.info__text {
+}
+.title {
+}
+.info__descr {
+    margin-bottom: 30px;
+    color: var(--text_color);
+    font-weight: 300;
+    span {
+        color: #000;
+        font-weight: 500;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
