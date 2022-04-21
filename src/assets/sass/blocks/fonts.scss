@@ -1,7 +1,7 @@
 @font-face {
-	font-family: 'Museo Sans Cyrl';
+	font-family: 'MuseoSansCyrl';
 	src: url('/assets/fonts/MuseoSansCyrl-300.eot');
-	src: local('/assets/fonts/MuseoSansCyrl-300'),
+	src: local('MuseoSansCyrl-300'),
 		url('/assets/fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
 		url('/assets/fonts/MuseoSansCyrl-300.woff') format('woff'),
 		url('/assets/fonts/MuseoSansCyrl-300.ttf') format('truetype');
@@ -10,31 +10,31 @@
 }
 
 @font-face {
-	font-family: 'Museo Sans Cyrl';
-	src: url('/assets/fonts/MuseoSansCyrl-black.eot');
-	src: local('/assets/fonts/MuseoSansCyrl-black'),
-		url('/assets/fonts/MuseoSansCyrl-black.eot?#iefix') format('embedded-opentype'),
-		url('/assets/fonts/MuseoSansCyrl-black.woff') format('woff'),
-		url('/assets/fonts/MuseoSansCyrl-black.ttf') format('truetype');
-	font-weight: black;
+	font-family: 'MuseoSansCyrl';
+	src: url('/assets/fonts/MuseoSansCyrl-900.eot');
+	src: local('MuseoSansCyrl-900'),
+		url('/assets/fonts/MuseoSansCyrl-900.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/MuseoSansCyrl-900.woff') format('woff'),
+		url('/assets/fonts/MuseoSansCyrl-900.ttf') format('truetype');
+	font-weight: 900;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Museo Sans Cyrl';
+	font-family: 'MuseoSansCyrl';
 	src: url('/assets/fonts/MuseoSansCyrl-500.eot');
 	src: local('MuseoSansCyrl-500'),
-		url('/assets/fonts/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/MuseoSansCyrl-500.eot') format('embedded-opentype'),
 		url('/assets/fonts/MuseoSansCyrl-500.woff') format('woff'),
 		url('/assets/fonts/MuseoSansCyrl-500.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Museo Sans Cyrl';
+	font-family: 'MuseoSansCyrl';
 	src: url('/assets/fonts/MuseoSansCyrl-700.eot');
-	src: local('/assets/fonts/MuseoSansCyrl-700'),
-		url('/assets/fonts/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+	src: local('MuseoSansCyrl-700'),
+		url('/assets/fonts/MuseoSansCyrl-700.eot') format('embedded-opentype'),
 		url('/assets/fonts/MuseoSansCyrl-700.woff') format('woff'),
 		url('/assets/fonts/MuseoSansCyrl-700.ttf') format('truetype');
 	font-weight: 700;
