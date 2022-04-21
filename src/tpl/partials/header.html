@@ -8,13 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BItWallet</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7.3.2/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.4.0/css/grid.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css?v=1.0.0">
 
     <style>
         :root {
-            --text_color: #585858;
+            --main_text: #585858;
+            --secondary_text: #fff;
             --accent_color: #19A364;
-            --thirty_bg: #252733;
             --secondary_accent: linear-gradient(85.07deg, #FFB800 0.66%, #ED864C 98.41%);
         }
     </style>
@@ -22,84 +23,149 @@
 
 <body>
     <div class="wrapper ">
+        <div class="overlay"></div>
         <header class="header">
             <div class="container">
-                <div class="header__top flex">
-                    <a href="#" class="logo">
-                        <img src="assets/img/logotype.png" alt="logo">
-                    </a>
-                    <button class="location">location</button>
-                    <input type="text" class="search" placeholder="Поиск по сайту">
-                    <a href="tel:(044)3448750"class="phone">(044) 344-87-50</a>
-                    <div class="users__block">
-                        <button class="enter__btn"><img src="assets/img/enter_icon.svg" alt=""></button>
-                        <button class="favorite__btn"><img src="assets/img/favorite_icon.svg" alt=""></button>
-                        <button class="cart__btn"><img src="assets/img/cart_icon.svg" alt="cart"></button>
+                <div class="row header__top">
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="logo">
+                            <img src="assets/img/logotype.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class=" d-none d-lg-block col-md-2">
+                        <button class="location ">Харьков</button>
+                    </div>
+                    <div class=" d-none d-lg-block col-md-4">
+                        <div class="search__inner">
+                            <input type="text" class="search" placeholder="Поиск по сайту">
+                        </div>
+                    </div>
+                    <div class=" d-none d-lg-block col-md-2">
+                        <a href="tel:(044)3448750" class="phone">(044) 344-87-50</a>
+                    </div>
+                    <div class="col-6 col-md-2 flex">
+                        <div class="users__block ">
+                            <button class="enter__btn"><img src="assets/img/enter_icon.svg" alt=""></button>
+                            <button class="favorite__btn"><img src="assets/img/favorite_icon.svg" alt=""></button>
+                            <button class="cart__btn">
+                                <img src="assets/img/cart_icon.svg" alt="cart">
+                                <span class="cart__index">2</span>
+                            </button>
+                        </div>
+                        <div class="burger__btn" id ="burger__btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
-                <div class="heder__nav flex">
-                    <div class="catalog__inner">
-                        <div class="catalog__head flex">
-                             <div class="catalog__title">Каталог</div> 
-                             <button class="catalog__btn">
-                                 <span></span>
-                                 <span></span>
-                                 <span></span>
-                            </button> 
+                <div class="row header__nav">
+                    <button class="close__nav" id="close__nav">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="col-lg-2">
+                        <div class="resp__social flex">
+                            <div class="social__list">
+                                <a href="#" target="blank" class="social__link">
+                                    <img src="assets/img/social_resp1.svg" alt="">
+                                </a>
+                                <a href="#" target="blank" class="social__link">
+                                    <img src="assets/img/social_resp2.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="lang">
+                                <span class="lang__btn">Ru</span>
+                                <button></button>
+                            </div>
                         </div>
-                        <ul class="catalog__list">
-                            <li class="catalog__item">
-                                 <a href="#" class="catalog__link flex">
-                                     <img src="assets/img/catalog__img1.svg" alt="" class="">
-                                     <span>Криптокошельки</span>
-                                 </a>
-                            </li>
-                            <li class="catalog__item">
-                                 <a href="#" class="catalog__link flex">
-                                     <img src="assets/img/catalog__img1.svg" alt="" class="">
-                                     <span>Криптокошельки</span>
-                                 </a>
-                            </li>
-                            <li class="catalog__item">
-                                 <a href="#" class="catalog__link flex">
-                                     <img src="assets/img/catalog__img1.svg" alt="" class="">
-                                     <span>Криптокошельки</span>
-                                 </a>
-                            </li>
-                            <li class="catalog__item">
-                                 <a href="#" class="catalog__link flex">
-                                     <img src="assets/img/catalog__img1.svg" alt="" class="">
-                                     <span>Криптокошельки</span>
-                                 </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="nav__inner  flex">
-                        <nav class="menu"> 
-                            <ul class="menu__list flex">
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link"><img src="assets/img/home_icon.svg" alt=""></a>
+                        <div class="catalog__inner ">
+                            <div class="catalog__head flex">
+                                <div class="catalog__title">Каталог</div>
+                                <button class="catalog__btn" id="catalog__btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <ul class="catalog__list">
+                                <li class="catalog__item">
+                                    <a href="#" class="catalog__link flex">
+                                        <img src="assets/img/catalog__img1.svg" alt="" class="">
+                                        <span>Криптокошельки</span>
+                                    </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">О компании</a>
+                                <li class="catalog__item">
+                                    <a href="#" class="catalog__link flex">
+                                        <img src="assets/img/catalog__img2.svg" alt="" class="">
+                                        <span>
+                                            Хранение резервных копий
+                                        </span>
+                                    </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Отзывы</a>
+                                <li class="catalog__item">
+                                    <a href="#" class="catalog__link flex">
+                                        <img src="assets/img/catalog__img3.svg" alt="" class="">
+                                        <span> Кабели и переходники</span>
+                                    </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Оплата и доставка </a>
+                                <li class="catalog__item">
+                                    <a href="#" class="catalog__link flex">
+                                        <img src="assets/img/catalog__img4.svg" alt="" class="">
+                                        <span>Ключи безопасности</span>
+                                    </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">FAQ</a>
+                                <li class="catalog__item">
+                                    <a href="#" class="catalog__link flex">
+                                        <img src="assets/img/catalog__img5.svg" alt="" class="">
+                                        <span>Чехлы и кейсы</span>
+                                    </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Блог</a>
+                                <li class="catalog__item">
+                                    <a href="#" class="catalog__link flex">
+                                        <img src="assets/img/catalog__img6.svg" alt="" class="">
+                                        <span>Аксессуары</span>
+                                    </a>
                                 </li>
-                                <li class="menu__item">
-                                    <a href="#" class="menu__link">Контакты</a>
+                                <li class="catalog__item">
+                                    <a href="#" class="catalog__link flex">
+                                        <img src="assets/img/catalog__img7.svg" alt="" class="">
+                                        <span>Наборы</span>
+                                    </a>
                                 </li>
                             </ul>
-                        </nav>
+                        </div> 
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="nav__inner">
+                            <nav class="menu">
+                                <ul class="menu__list flex">
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link"><img src="assets/img/home_icon.svg" alt=""><span>Клиентам</span></a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">О компании</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Отзывы</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Оплата и доставка </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">FAQ</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Блог</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#" class="menu__link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-flex col-lg-2">
                         <div class="social__list">
                             <a href="#" target="blank" class="social__link">
                                 <img src="assets/img/instagram_icon.svg" alt="">
@@ -109,8 +175,38 @@
                             </a>
                         </div>
                         <div class="lang">
-                            <button class="lang__btn">Ru</button>
+                            <span class="lang__btn">Ru</span>
+                            <button></button>
                         </div>
+                    </div>
+                    <div class="hide__nav">
+                        <ul class="our__contact">
+                            <div class="our__contact-name">Контактная информация</div>
+                            <li class="our__contact-item">
+                                <a href="#" class="our__contact-link flex">
+                                    <img class="our__contact-icon" src="assets/img/phone_icon-black.svg" alt="">
+                                    <span class="our__contact-value our__contact-value-phone">(044) 344-87-50
+                                    </span>
+                                </a>
+                                <a href="#" class="our__contact-link flex">
+                                    <img class="our__contact-icon" src="assets/img/mail_icon-black.svg" alt="">
+                                    <span class="our__contact-value-mail">heybitwalletbot
+                                    </span>
+                                </a>
+                                <a href="#" class="our__contact-link flex">
+                                    <img class="our__contact-icon" src="assets/img/mail_icon-black.svg" alt="">
+                                    <span class="our__contact-value-mail">hello@bitwallet.com.ua
+                                    </span>
+                                </a>
+                                <a href="#" class="our__contact-link flex">
+                                    <img class="our__contact-icon" src="assets/img/locaition_icon-black.svg" alt="">
+                                    <span class="our__contact-value our__contact-value-locaition">Киев, улица Елизаветы
+                                        Чавдар 13
+                                    </span>
+                                </a>
+                            </li>
+        
+                        </ul>
                     </div>
                 </div>
             </div>
