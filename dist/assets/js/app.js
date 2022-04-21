@@ -44,23 +44,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mobileNav = document.querySelector('.header__nav');
     const mobileNavFoot = document.querySelector('.footer__nav-resp');
+
     burgerBtn.addEventListener('click', () => {
         mobileNav.classList.add('show');
         document.querySelector('body').style.overflow = 'hidden';
+        document.querySelector('header .logo').style.opacity = '0';
+        document.querySelector('.overlay').classList.add('overlay__visible');
         burgerBtn.style.opacity = '0'
     });
 
     burgerOpenFoot.addEventListener('click', () => {
         mobileNavFoot.style.right = '-20px';
+        document.querySelector('.overlay').classList.add('overlay__visible');
     });
     burgerCloseFoot.addEventListener('click', () => {
         mobileNavFoot.style.right = '-100%';
+        document.querySelector('.overlay').classList.remove('overlay__visible');
+
     });
 
     burgerClose.addEventListener('click', () => {
         mobileNav.classList.remove('show');
         document.querySelector('body').style.overflow = 'auto';
-        burgerBtn.style.opacity = '1'
+        document.querySelector('header .logo').style.opacity = '1';
+        burgerBtn.style.opacity = '1';
+        document.querySelector('.overlay').classList.remove('overlay__visible');
+
+
     });
 
     // Sliders-----------------------------------------------------------
