@@ -228,7 +228,7 @@ section {
 }
 
 .slider__offer {
-    padding-top: 95px;
+    // padding-top: 95px;
     color      : #fff;
 
     .slider__img {
@@ -552,6 +552,10 @@ section {
 
 // tabs end 
 
+.product {
+    padding-bottom: 100px;
+}
+
 .product__card {
     background   : linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     box-shadow   : (0px 12px 31px rgba(15, 112, 68, 0.11));
@@ -792,9 +796,9 @@ section {
 .reviews {
     padding-top: 150px;
 
-    .container {
-        padding: 0;
-    }
+    // .container {
+    //     padding: 0;
+    // }
 
     h1 {
         margin-bottom: 10px;
@@ -1067,8 +1071,18 @@ section {
         left: 15px;
     }
 
+    .benefits {
+        max-width: calc(100% - 30px);
+    }
+
     .brands__inner .swiper-button-next {
         left: 15px;
+    }
+
+    .tabs__content {
+        .row {
+            margin: 0;
+        }
     }
 
     .reviews .swiper-button-prev {
@@ -1099,8 +1113,12 @@ section {
         margin-bottom: 40px;
     }
 
-    .benefits {
-        max-width: calc(100% - 30px);
+    .slider__offer h1 {
+        max-width: 450px;
+    }
+
+    .slider__offer-text {
+        max-width: 400px;
     }
 
     .benefits__item {
@@ -1127,20 +1145,19 @@ section {
     }
 
     .slider__offer {
-        padding-top: 0;
         color      : #fff;
 
         .slider__img {
             display: block;
 
             img:first-child {
-                width : 450px;
-                height: 450px;
+                max-width: 100%;
             }
         }
 
         h1 {
-            margin-bottom: 0;
+            margin-bottom: 35px;
+            max-width: 100%;
         }
     }
 
@@ -1169,14 +1186,20 @@ section {
     }
 
     .secondary__btn-icon {
-        margin-left  : 0;
+        // margin-left  : 0;
         margin-bottom: 20px;
     }
+
 
     .benefits__item {
         padding-left   : 0;
         justify-content: center;
         margin-bottom  : 30px;
+    }
+
+    .categories__item.categories__item-large .categories__item-info {
+        padding-left: 5px;
+        margin-top: auto;
     }
 
     .tabs__header {
@@ -1199,7 +1222,7 @@ section {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
     section {
         padding-bottom: 65px;
@@ -1208,6 +1231,8 @@ section {
     .categories {
         padding-bottom: 35px;
     }
+
+    
 
     .product {
         padding-bottom: 35px;
@@ -1740,7 +1765,6 @@ section {
     }
 
     .slider__img {
-        max-width    : 100%;
         margin-top   : -35px;
         margin-bottom: -35px;
 

@@ -3,11 +3,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     // accordion script
 
-    let collapsibleHeaders = document.getElementsByClassName('collapsible__header');
+    let collapsibleHeaders = document.querySelectorAll('.accordion__collapsible');
 
-    Array.from(collapsibleHeaders).forEach(header => {
-        header.addEventListener('click', () => {
-            header.parentElement.classList.toggle('collapsible--open');
+    collapsibleHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            if (this.classList.contains('collapsible--open')) {
+                this.classList.remove('collapsible--open');
+            } else {
+                for (el of collapsibleHeaders) {
+                    el.classList.remove('collapsible--open');
+                }
+                this.classList.add('collapsible--open');
+            }
         });
     });
 
@@ -153,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.swiper-button-next'
         },
     });
-    
+
     const tabs = document.querySelector('.tabs');
     const tabsBtn = document.querySelectorAll('.tabs__btn');
     const tabsContent = document.querySelectorAll('.tabs__content');
