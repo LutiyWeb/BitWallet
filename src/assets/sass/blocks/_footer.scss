@@ -98,7 +98,6 @@
         padding-top: 10px;
 
         span {
-            // transform    : translateY(20px);
             background-color: #19A364;
         }
     }
@@ -333,6 +332,16 @@
 
 @media screen and (max-width: 992px) {
 
+    .footer .logo img {
+        max-width: 150px;
+    }
+
+    .footer .logo {
+        margin-top   : 33px;
+        margin-bottom: 16px;
+    }
+
+
     .footer .burger__btn {
         display : block;
         position: absolute;
@@ -341,6 +350,28 @@
         z-index : 1;
     }
 
+
+    .footer .burger__btn {
+        top: 41px;
+    }
+
+    .help__links,
+    .our__contact,
+    .payment {
+        font-weight: 500;
+    }
+
+    .our__contact-name {
+        margin-bottom: 5px;
+    }
+
+    .our__contact-link:first-child {
+        margin-bottom: 32px;
+    }
+
+    .our__contact-link:last-child {
+        margin-bottom: 35px;
+    }
     .our__contact-resp {
         display: block;
         padding: 0;
@@ -378,6 +409,14 @@
 
     }
 
+    .payment__text {
+        margin-bottom: 7px;
+    }
+
+    .payment__icon {
+        margin-right: -9px;
+    }
+
     .footer__social>* {
         margin-right: 0;
 
@@ -408,9 +447,6 @@
     .footer .footer__bg:after {
         display: none;
     }
-}
-
-@media screen and (max-width: 576px) {
 
     .payment,
     .help__links,
@@ -449,64 +485,21 @@
         top            : -200px;
     }
 
-
-}
-
-@media screen and (max-width: 376px) {
-    .footer .logo img {
-        max-width: 150px;
-    }
-
-    .footer .logo {
-        margin-top   : 33px;
-        margin-bottom: 16px;
-    }
-
-    .footer .burger__btn {
-        top: 41px;
-    }
-
-    .help__links,
-    .our__contact,
-    .payment {
-        font-weight: 500;
-    }
-
-    .our__contact-name {
-        margin-bottom: 5px;
-    }
-
-    .our__contact-link:first-child {
-        margin-bottom: 32px;
-    }
-
-    .our__contact-link:last-child {
-        margin-bottom: 35px;
-    }
-
-    .flex-md {
-        display       : flex;
-        flex-direction: column;
-    }
-
     .help__links {
-        margin-bottom: 18px;
-    }
-
-    .payment__text {
-        margin-bottom: 7px;
-    }
-
-    .payment__icon {
-        margin-right: -9px;
-    }
-
-    .footer__addit {
-        margin-top: 13px;
+        margin-bottom: 15px;
     }
 
     .footer__copy {
         font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .flex-md {
+        display       : flex;
+        flex-direction: column;
     }
 
 }

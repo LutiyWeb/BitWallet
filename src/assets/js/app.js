@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    if (window.screen.width > 768) {
+    if (window.screen.width > 992) {
         document.querySelector('.brands__inner').classList.add('swiper-container');
         document.querySelector('.brands__inner .row').classList.add('swiper-wrapper');
         new Swiper('.brands__inner', {
@@ -140,17 +140,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     new Swiper('.reviews__inner', {
-        slidesPerView: 3,
 
         breakpoints: {
 
-            560: {
-                spaceBetween: 20,
+            992: {
+                slidesPerView: 3,
 
-            },
-
-            320: {
-                slidesPerView: '1',
             },
 
         },

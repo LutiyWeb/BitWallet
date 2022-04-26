@@ -1,5 +1,5 @@
 .faq {
-    padding-top: 100px;
+    padding-top   : 100px;
     padding-bottom: 120px;
 }
 
@@ -61,28 +61,26 @@
     }
 }
 
-.collapsible__header::after {
-    content      : '';
-    position     : relative;
-    z-index      : 0;
-    width        : 48px;
-    height       : 48px;
-    background   : #f6f6f6;
-    box-shadow   : 0px 3px 7px rgba(15, 112, 68, 0.18);
-    border-radius: 14px;
+.collapsible__header-btn {
+    position       : relative;
+    z-index        : 0;
+    width          : 48px;
+    height         : 48px;
+    background     : #f6f6f6;
+    box-shadow     : 0px 3px 7px rgba(15, 112, 68, 0.18);
+    border-radius  : 14px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
 }
 
-.collapsible__header::before {
-    content     : '';
-    position    : absolute;
-    right       : 25px;
-    top         : 23px;
-    z-index     : 1;
+.collapsible__header-btn span {
     width       : 11px;
     height      : 11px;
     background  : transparent;
     border-right: 3px solid #19A364;
     border-top  : 3px solid #19A364;
+    display     : block;
     transform   : rotate(135deg);
     transition  : all .6s;
 }
@@ -94,15 +92,16 @@
     overflow  : hidden;
 }
 
-.collapsible--open .collapsible__header::before {
-    transform: rotate(-45deg);
-    top      : 27px;
+.collapsible--open .collapsible__header-btn span {
+    transform   : rotate(-45deg);
+    margin-top  : 4px;
+    // top      : 27px;
 }
 
 .collapsible--open .collapsible__content {
-    max-height: 200px;
-    opacity   : 1;
-    padding   : 40px 45px;
+    max-height : 200px;
+    opacity    : 1;
+    padding    : 40px 45px;
     line-height: 2em;
 
 }
@@ -121,7 +120,7 @@
 
 .form__inner-box {
     position: relative;
-    z-index: 1;
+    z-index : 1;
 }
 
 .form__inner {
@@ -130,7 +129,7 @@
     color        : #fff;
     padding      : 49px 45px 180px;
     position     : relative;
-    overflow: hidden;
+    overflow     : hidden;
 
     .main__btn-icon {
         padding: 20px 32px;
@@ -147,32 +146,32 @@
 }
 
 .inputfield {
-    height: 60px;
-    width: 260px;
+    height       : 60px;
+    width        : 260px;
     background   : #FFFFFF;
     box-shadow   : 0px 15px 24px -10px rgba(0, 0, 0, 0.18);
     border-radius: 40px;
     margin-bottom: 32px;
-    align-items: center;
+    align-items  : center;
 
     input {
-        font-family: inherit;
-        height: 100%;
-        color: #000;
+        font-family : inherit;
+        height      : 100%;
+        color       : #000;
         padding-left: 32px;
     }
 }
 
 
 .call__icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.11);
-    display: flex;
-    align-items: center;
+    width          : 50px;
+    height         : 50px;
+    border-radius  : 50%;
+    box-shadow     : 0px 5px 12px rgba(0, 0, 0, 0.11);
+    display        : flex;
+    align-items    : center;
     justify-content: center;
-    transform    : translatex(8px);
+    transform      : translatex(8px);
 }
 
 .notification__text {
@@ -188,16 +187,28 @@
 }
 
 .form__img img {
-    display: block;
-    max-width: 100%;
-    height: 100%;
+    display   : block;
+    max-width : 100%;
+    height    : 100%;
     object-fit: cover;
 }
 
 @media screen and (max-width: 1200px) {
     .form__inner {
         padding-left: 20px;
-        padding-top: 20px;
+        padding-top : 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .form__inner {
+        padding   : 20px;
+        margin-top: 60px;
+    }
+
+
+    .call__icon {
+        transform: translate(0);
     }
 }
 
@@ -211,14 +222,81 @@
     }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 576px) {
+
+    .faq {
+        padding-top: 30px;
+    }
+    .collapsible__header p {
+        font-size  : 15px;
+        line-height: 1.3em;
+        max-width  : 220px;
+    }
+
+    .collapsible__header-btn {
+        margin-top: -10px;
+    }
+
+    .collapsible--open .collapsible__content {
+        padding    : 16px 23px;
+        line-height: 1.3em;
+        max-height : fit-content;
+    }
+
+    .collapsible__header p:before {
+        top: calc(50% - 15px);
+    }
+
+    .form__inner h1 {
+        margin-bottom: 22px;
+    }
+
+    .form__inner {
+        padding: 30px 26px 180px;
+
+        .inputfield {
+            width: 100%;
+            max-width: 260px;
+            justify-content: space-between;
+            padding-right: 6px;
+            height: 50px;
+        }
+
+        
+    }
+
+    .call__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .form__img {
+        height: 75%;
+    }
+
+    .notification__text {
+        padding-left : 26px;
+        max-width    : 210px;
+        margin-bottom: 17px;
+        line-height  : 1.2em;
+        font-size    : 14px;
+    }
+
+    .form__info {
+        font-size     : 17px;
+        font-weight   : 500;
+        line-height   : 1.3em;
+        letter-spacing: 0.01em;
+    }
+
+
     .collapsible__header p {
         max-width: 200px;
     }
 
     .collapsible__header {
         padding-top   : 16px;
-        padding-bottom: 12px;
+        padding-bottom: 19px;
     }
 
     .collapsible__header:before {
@@ -227,19 +305,5 @@
 
     .collapsible--open .collapsible__header:before {
         margin-top: 5px;
-    }
-
-    .form__inner {
-        padding-left: 30px;
-        padding-top: 30px;
-    }
-
-    .form__info {
-        letter-spacing: 0.01em;
-    }
-
-    .notification__text {
-        line-height: 1.2em;
-        font-size: 14px;
     }
 }
