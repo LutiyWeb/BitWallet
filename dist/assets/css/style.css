@@ -2742,6 +2742,7 @@ section {
     overflow: hidden;
     padding-left: 35px;
     margin-left: -35px;
+    margin-right: -25px;
 }
 
 .reviews h1 {
@@ -2788,8 +2789,10 @@ section {
     background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(rgba(255, 255, 255, 0)));
     background: -o-linear-gradient(top, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-    -webkit-filter: drop-shadow(0px 12px 31px rgba(15, 112, 68, 0.11));
-    filter: drop-shadow(0px 12px 31px rgba(15, 112, 68, 0.11));
+    -webkit-filter: drop-shadow(0px 12px 31px rgba(15, 112, 68, 0.05));
+    filter: drop-shadow(0px 12px 31px rgba(15, 112, 68, 0.05));
+    -webkit-box-shadow: 0px 12px 31px rgba(15, 112, 68, 0.11);
+    box-shadow: 0px 12px 31px rgba(15, 112, 68, 0.11);
     border-radius: 20px;
     padding: 42px;
 }
@@ -2959,9 +2962,13 @@ section {
 }
 
 .addit__news-item {
-    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(rgba(255, 255, 255, 0)));
+    background: -o-linear-gradient(top, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     -webkit-filter: drop-shadow(0px 12px 31px rgba(15, 112, 68, 0.09));
     filter: drop-shadow(0px 12px 31px rgba(15, 112, 68, 0.09));
+    -webkit-box-shadow: 0px 12px 31px rgba(15, 112, 68, 0.09);
+    box-shadow: 0px 12px 31px rgba(15, 112, 68, 0.09);
     border-radius: 20px;
     padding: 30px 30px 30px 40px;
     margin-bottom: 30px;
@@ -2987,7 +2994,6 @@ section {
 
 .addit__news-text {
     margin-bottom: 20px;
-    font-family: 'Museo Sans Cyrl';
     font-weight: 300;
     line-height: 1.35em;
     letter-spacing: 0.01em;
@@ -3461,6 +3467,21 @@ section {
         top: calc(50% - -25px);
     }
 
+    .reviews .container {
+        padding: 0;
+    }
+
+    .reviews h1 {
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .reviews .reviews__inner {
+        margin: 0;
+        padding-right: 35px;
+        padding-top: 25px;
+    }
+
     .reviews .swiper-button-next,
   .reviews .swiper-button-prev {
         top: calc(50% - 45px);
@@ -3904,7 +3925,7 @@ section {
 
     .reviews .reviews__inner {
         position: relative;
-        padding: 40px 0 0 0;
+        padding: 40px 20px 0 35px;
         margin-left: 0;
     }
 
