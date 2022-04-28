@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // accordion script
+
+
+    //catalog nav show
     const catalogBtn = document.querySelector('#catalog__btn');
     const catalogInner = document.querySelector('.catalog__inner');
     catalogBtn.addEventListener('click', () => {
@@ -95,31 +98,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (window.screen.width < 768) {
         document.querySelector('.footer').classList.add('footer-resp');
-        document.querySelector('.brands__inner').classList.remove('swiper-container');
-        document.querySelector('.brands__inner .row').classList.remove('swiper-wrapper');
-        const slideArr = document.querySelectorAll('.brands__inner .row div.swiper-slide');
-        slideArr.forEach(element => {
-            element.classList.remove('swiper-slide');
-        });
-
     }
 
-
-    if (window.screen.width < 576) {
-        let bannerImg1 = document.querySelector('#banner__img1');
-        bannerImg1.src = "assets/img/banner_img-resp.png";
-        let bannerImg2 = document.querySelector('#banner__img2');
-        bannerImg2.src = "assets/img/banner_img-resp2.png";
-    }
     if (window.screen.width < 376) {
         let newsTitle = document.querySelector('#newsBannerTitle');
         newsTitle.innerHTML = 'Лучшие Крипто- кошельки';
 
     }
 
+    if (window.screen.width < 992) {
+        document.querySelector('.brands__inner').classList.remove('swiper-container');
+        document.querySelector('.brands__inner .row').classList.remove('swiper-wrapper');
+        const slideArr = document.querySelectorAll('.brands__inner .row div.swiper-slide');
+        slideArr.forEach(element => {
+            element.classList.remove('swiper-slide');
+        });
+    }
+
+
+
     if (window.screen.width > 992) {
-        document.querySelector('.brands__inner').classList.add('swiper-container');
-        document.querySelector('.brands__inner .row').classList.add('swiper-wrapper');
+
         new Swiper('.brands__inner', {
             slidesPerView: 6,
             breakpoints: {
@@ -206,7 +205,3 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
     };
 });
-
-
-// tabs
-// 

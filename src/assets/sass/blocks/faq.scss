@@ -40,7 +40,7 @@
     font-size      : 18px;
     display        : flex;
     justify-content: space-between;
-    align-items    : center;
+    // align-items    : center;
     padding        : 6px 7px 6px 50px;
     cursor         : pointer;
     transition     : all .6s;
@@ -52,7 +52,7 @@
     &::before {
         content         : '';
         position        : absolute;
-        top             : calc(50% - 5px);
+        top             : 7px;
         left            : -27px;
         width           : 10px;
         height          : 10px;
@@ -209,6 +209,14 @@
 
     .call__icon {
         transform: translate(0);
+        width: 40px;
+        height: 40px;
+    }
+
+    .inputfield {
+        justify-content: space-between;
+        padding-right: 6px;
+        height: 50px;
     }
 }
 
@@ -244,7 +252,7 @@
     }
 
     .collapsible__header p:before {
-        top: calc(50% - 15px);
+        top: 4px;
     }
 
     .form__inner h1 {
@@ -257,18 +265,12 @@
         .inputfield {
             width: 100%;
             max-width: 260px;
-            justify-content: space-between;
-            padding-right: 6px;
-            height: 50px;
         }
 
         
     }
 
-    .call__icon {
-        width: 40px;
-        height: 40px;
-    }
+
 
     .form__img {
         height: 75%;

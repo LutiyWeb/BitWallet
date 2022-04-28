@@ -425,6 +425,10 @@ section {
     flex          : 1 1 auto;
 }
 
+.main__btn-icon__inner {
+    padding-bottom: 20px;
+}
+
 .main__btn-icon {
     letter-spacing: 0.06em;
     background    : linear-gradient(85.07deg, #FFB800 0.66%, #ED864C 98.41%);
@@ -597,6 +601,12 @@ section {
     padding      : 0 0 30px;
     position     : relative;
 
+    .main__btn:hover {
+        background  : linear-gradient(85.07deg, #FFB800 0.66%, #ED864C 98.41%);
+        border-color: transparent;
+        color       : #fff;
+    }
+
 }
 
 .product__card-img {
@@ -761,7 +771,6 @@ section {
     align-items     : center;
     justify-content : center;
     height          : 117px;
-    // box-sizing: content-box;
 
     img {
         max-width: 100%;
@@ -829,16 +838,41 @@ section {
 .reviews {
     padding-top: 150px;
 
-    // .container {
-    //     padding: 0;
-    // }
+    .reviews__inner {
+        overflow    : hidden;
+        padding-left: 35px;
+        margin-left : -35px;
+    }
+
 
     h1 {
-        margin-bottom: 10px;
+        margin-bottom  : 10px;
+        // padding-left: 60px;
+    }
+
+    .swiper-slide-prev {
+        opacity: 0;
+    }
+
+    .swiper-slide-next+.swiper-slide+.swiper-slide {
+        opacity: 0;
+    }
+
+    .swiper-wrapper {
+        box-sizing      : border-box;
+        // transition   : opacity .6s;
+        // padding-left: 60px;
+        // overflow: hidden;
     }
 
     .swiper-slide {
         display: block;
+        padding: 40px 15px;
+
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
     }
 
     .swiper-button-next,
@@ -856,9 +890,6 @@ section {
     }
 }
 
-.reviews__inner {
-    padding: 40px 15px;
-}
 
 .reviews__item {
     background   : linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
@@ -1028,11 +1059,12 @@ section {
 }
 
 .addit__news-item {
-    background   : linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-    filter       : drop-shadow(0px 12px 31px rgba(15, 112, 68, 0.09));
-    border-radius: 20px;
-    padding      : 30px 30px 30px 40px;
-    margin-bottom: 30px;
+    background      : #fff;
+    // background   : linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    filter          : drop-shadow(0px 12px 31px rgba(15, 112, 68, 0.09));
+    border-radius   : 20px;
+    padding         : 30px 30px 30px 40px;
+    margin-bottom   : 30px;
 
     .details {
         font-weight: 300;
@@ -1222,14 +1254,14 @@ section {
     }
 
     .main {
-        padding-bottom: 95px;
+        padding-bottom: 65px;
     }
 
     .decor__img1,
     .decor__img6,
     .decor__img7,
     .decor__img8,
-    .decor__img10, 
+    .decor__img10,
     .decor__img12,
     .decor__img13 {
         display: none;
@@ -1320,7 +1352,7 @@ section {
     .slider__img-money2 {
         bottom: 9%;
         width : 20%;
-        left: 7%;
+        left  : 7%;
     }
 
     .slider__img-money3 {
@@ -1357,9 +1389,9 @@ section {
     }
 
     .categories__item.categories__item-large .categories__item-info {
-        padding-left      : 5px;
-        margin-top        : auto;
-        width             : 100%;
+        padding-left: 5px;
+        margin-top  : auto;
+        width       : 100%;
     }
 
     .categories__item-large.decor:before {
@@ -1470,7 +1502,7 @@ section {
     }
 
     .reviews {
-        padding-top    : 60px;
+        padding-top: 60px;
     }
 
     .news {
@@ -1482,7 +1514,7 @@ section {
         margin-bottom: 20px;
 
         .banner__img img {
-            right: -10px;
+            right   : -10px;
             position: relative;
         }
     }
@@ -1532,10 +1564,6 @@ section {
         top: calc(50% - 45px);
     }
 
-    .reviews .swiper-button-prev {
-        right: 0;
-    }
-
     .reviews .swiper-wrapper {
         box-sizing: border-box;
     }
@@ -1543,8 +1571,8 @@ section {
 
     .reviews .swiper-slide.swiper-slide-active {
 
-        width    : calc(100% + 30px) !important;
-        padding  : 0;
+        width  : calc(100% + 30px) !important;
+        padding: 0;
     }
 
     .reviews .swiper-slide:not(.swiper-slide-active) {
@@ -1617,39 +1645,39 @@ section {
 
     .decor__img2 {
         width: 87%;
-        top: 27%;
+        top  : 27%;
     }
 
     .decor__img3 {
         width: 52%;
-        top: 22%;
+        top  : 22%;
     }
 
     .decor__img5 {
-        left: 50%;
-        top: 58%;
+        left : 50%;
+        top  : 58%;
         width: 40%;
     }
 
     .decor__img9 {
-        top: 6%;
+        top  : 6%;
         right: -50px;
         width: 80%;
     }
 
-    .slider__img-money1  {
+    .slider__img-money1 {
         width: 24%;
     }
 
-    .slider__img-money2  {
+    .slider__img-money2 {
         width: 24%;
     }
 
-    .slider__img-money3  {
+    .slider__img-money3 {
         width: 32%;
     }
 
-    .slider__img-money4  {
+    .slider__img-money4 {
         width: 20%;
     }
 
@@ -1735,8 +1763,8 @@ section {
     }
 
     .categories__item-large.decor:before {
-        left: 46%;
-        width: 120%;
+        left  : 46%;
+        width : 120%;
         height: 120%;
     }
 
@@ -1768,9 +1796,9 @@ section {
 
 
     .tabs__btn {
-        white-space   : nowrap;
-        margin-right  : 11px;
-        font-size     : 13px;
+        white-space : nowrap;
+        margin-right: 11px;
+        font-size   : 13px;
 
     }
 
@@ -1882,13 +1910,13 @@ section {
 
     .product .banner:after {
         background-position: 0;
-        background-size: cover;
-        width: 100%;
-        height: 120%;
+        background-size    : cover;
+        width              : 100%;
+        height             : 120%;
     }
 
     .product .banner .secondary__btn-icon {
-        width: calc(100% - 10px);
+        width       : calc(100% - 10px);
         padding-left: 30px;
     }
 
@@ -1899,7 +1927,7 @@ section {
 
     .banner__offer h1.title {
         margin-bottom: 24px;
-        font-size: 34px;
+        font-size    : 34px;
     }
 
     .product__card-img {
@@ -1951,9 +1979,8 @@ section {
         height: 40px;
     }
 
-    .reviews .swiper-button-next,
     .reviews .swiper-button-prev {
-        top: calc(50% - -11px);
+        right: 0;
     }
 
     .banner {
@@ -1971,9 +1998,10 @@ section {
         }
     }
 
-    .reviews__inner {
-        position      : relative;
-        padding: 40px 0 0 15px;
+    .reviews .reviews__inner {
+        position: relative;
+        padding : 40px 0 0 0;
+        margin-left: 0;
 
         .swiper-slide {
             opacity: 0;
@@ -1981,7 +2009,7 @@ section {
 
         .swiper-slide.swiper-slide-active {
             opacity: 1;
-            width: calc(100% + 15px)!important;
+            width  : calc(100% + 15px) !important;
 
         }
     }
@@ -2090,7 +2118,7 @@ section {
     }
 
     .news .banner:after {
-        background-image: url('../../assets/img/banner_decor2.png');
+        background-image   : url('../../assets/img/banner_decor2.png');
         background-position: bottom;
     }
 

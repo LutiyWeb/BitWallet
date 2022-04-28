@@ -180,6 +180,10 @@
     font-weight: 700;
 }
 
+.our__contact-resp {
+    display: none;
+}
+
 .our__contact {
     padding-top : 20px;
     padding-left: 110px;
@@ -326,7 +330,11 @@
 
 @media screen and (max-width: 1400px) {
     .our__contact {
-        padding-left: 50px;
+        padding-left: 0;
+    }
+
+    .return__btn {
+        right: 5px;
     }
 }
 
@@ -491,6 +499,7 @@
 
     .footer__copy {
         font-size: 12px;
+        white-space: nowrap;
     }
 
 }

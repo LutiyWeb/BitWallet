@@ -218,7 +218,8 @@
                     <div class="row align-items-center">
                         <div class="d-none d-lg-block col-lg-6">
                             <div class="slider__img">
-                                <img src="assets/img/slides_img1.png" style="position: relative; z-index: 5; max-width: 100%;" alt="">
+                                <img src="assets/img/slides_img1.png"
+                                    style="position: relative; z-index: 5; max-width: 100%;" alt="">
                                 <img src="assets/img/slides_img2.png" class="slider__img-money slider__img-money1"
                                     alt="">
                                 <img src="assets/img/slides_img3.png" class="slider__img-money slider__img-money2"
@@ -253,8 +254,9 @@
                                     <span>3 990 грн</span>
                                     <span class="noActuall">3 990 грн</span>
                                 </div>
-                                <button class="main__btn-icon">В корзину <span><img src="assets/img/btnCart_icon.svg"
-                                            alt=""></span></button>
+                                <div class="main__btn-icon__inner">
+                                    <button class="main__btn-icon">В корзину <span><img src="assets/img/btnCart_icon.svg" alt=""></span></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -263,7 +265,8 @@
                     <div class="row align-items-center">
                         <div class="d-none d-lg-block col-lg-6">
                             <div class="slider__img">
-                                <img src="assets/img/slides_img1.png" style="position: relative; z-index: 5; max-width: 100%;" alt="">
+                                <img src="assets/img/slides_img1.png"
+                                    style="position: relative; z-index: 5; max-width: 100%;" alt="">
                                 <img src="assets/img/slides_img2.png" class="slider__img-money slider__img-money1"
                                     alt="">
                                 <img src="assets/img/slides_img3.png" class="slider__img-money slider__img-money2"
@@ -298,8 +301,9 @@
                                     <span>3 990 грн</span>
                                     <span class="noActuall">3 990 грн</span>
                                 </div>
-                                <button class="main__btn-icon">В корзину <span><img src="assets/img/btnCart_icon.svg"
-                                            alt=""></span></button>
+                                <div class="main__btn-icon__inner">
+                                    <button class="main__btn-icon">В корзину <span><img src="assets/img/btnCart_icon.svg" alt=""></span></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -308,7 +312,8 @@
                     <div class="row align-items-center">
                         <div class="d-none d-lg-block col-lg-6">
                             <div class="slider__img">
-                                <img src="assets/img/slides_img1.png" style="position: relative; z-index: 5; max-width: 100%;" alt="">
+                                <img src="assets/img/slides_img1.png"
+                                    style="position: relative; z-index: 5; max-width: 100%;" alt="">
                                 <img src="assets/img/slides_img2.png" class="slider__img-money slider__img-money1"
                                     alt="">
                                 <img src="assets/img/slides_img3.png" class="slider__img-money slider__img-money2"
@@ -343,8 +348,9 @@
                                     <span>3 990 грн</span>
                                     <span class="noActuall">3 990 грн</span>
                                 </div>
-                                <button class="main__btn-icon">В корзину <span><img src="assets/img/btnCart_icon.svg"
-                                            alt=""></span></button>
+                                <div class="main__btn-icon__inner">
+                                    <button class="main__btn-icon">В корзину <span><img src="assets/img/btnCart_icon.svg" alt=""></span></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -429,7 +435,7 @@
         <div class="row" style="align-items: stretch;">
             <div class="col-6 col-lg-5 flex">
                 <div class="categories__item categories__item-large decor">
-                    <div class="categories__item-img" >
+                    <div class="categories__item-img">
                         <img src="assets/img/categories_img1.png" class="categories__item-img" alt="Криптокошельки">
                     </div>
                     <div class="categories__item-info">
@@ -537,13 +543,14 @@
             </div>
             <div class="col-lg-6">
                 <ul class="tabs__list">
-                    <li class="tabs__item"><button class="tabs__btn tabs__btn--active"data-tabs-path="1">Все товары </button></li>
+                    <li class="tabs__item"><button class="tabs__btn tabs__btn--active" data-tabs-path="1">Все товары
+                        </button></li>
                     <li class="tabs__item"><button class="tabs__btn" data-tabs-path="2">Хиты продаж </button></li>
                     <li class="tabs__item"><button class="tabs__btn" data-tabs-path="3">Распродажа</button></li>
                     <li class="tabs__item"><button class="tabs__btn" data-tabs-path="4">Новинки</button></li>
                 </ul>
             </div>
-            
+
             <div class="tabs__content tabs__content--active" data-tabs-target="1">
                 <div class="row" style="align-items: stretch;">
                     <div class="col-6  col-lg-3">
@@ -1068,7 +1075,7 @@
 <section class="brands">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg">
                 <h1 class="title">Популярные бренды</h1>
             </div>
         </div>
@@ -1129,7 +1136,10 @@
                         <a href="#" class="main__btn">Подробнее</a>
                     </div>
                     <div class="banner__img">
-                        <img id="banner__img1" src="assets/img/banner_img1.png" alt="banner">
+                        <picture>
+                            <source srcset="assets/img/banner_img-resp.png" media="(max-width: 576px)">
+                            <img srcset="assets/img/banner_img1.png" alt="banner">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -1143,7 +1153,10 @@
                         <a href="#" class="main__btn">Подробнее</a>
                     </div>
                     <div class="banner__img">
-                        <img id="banner__img2" src="assets/img/banner_img2.png" alt="banner">
+                        <picture>
+                            <source srcset="assets/img/banner_img-resp2.png" media="(max-width: 576px)">
+                            <img srcset="assets/img/banner_img2.png" alt="banner">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -1156,11 +1169,11 @@
 <section class="reviews">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg">
                 <h1 class="title">Отзывы наших покупателей</h1>
             </div>
         </div>
-        <div class="reviews__inner swiper-container">
+        <div class="reviews__inner ">
             <div class="row swiper-wrapper">
                 <div class="col-lg-4 swiper-slide">
                     <div class="reviews__item">
@@ -1308,10 +1321,10 @@
 <section class="news">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-7">
+            <div class="col-sm-6 col-lg-9">
                 <h1 class="title">Как пользоваться кошельками</h1>
             </div>
-            <div class="d-none d-sm-flex col-sm-6 col-md-5">
+            <div class="d-none d-sm-flex col-sm-6 col-lg-3">
                 <div class="secondary__btn-icon">
                     <span>Читать все статьи</span>
                     <span>
@@ -1787,14 +1800,14 @@
             </div>
         </div>
         <div class="row footer__addit ">
-            <div class="col-md-4">
+            <div class="col-lg-5">
                 <div class="footer__social">
                     <a href="#" class="footer__social-icon"><img src="assets/img/instagram_icon-white.svg" alt=""></a>
                     <a href="#" class="footer__social-icon"><img src="assets/img/facebook_icon-white.svg" alt=""></a>
                     <span>Мы в соц сетях</span>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-7">
                 <div class="footer__copy">© Интернет-магазин «Bitwallet» 2017-2022</div>
             </div>
         </div>
@@ -1808,7 +1821,6 @@
 </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@7.3.2/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./assets/js/app.js"></script>
 </body>
 
