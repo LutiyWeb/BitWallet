@@ -2687,6 +2687,13 @@ section {
     background-color: #fff;
     cursor: pointer;
     padding: 10px 25px;
+    -webkit-transition: background-color, color .6s;
+    -o-transition: background-color, color .6s;
+    transition: background-color, color .6s;
+}
+
+.banner .main__btn:hover {
+    border: 1px solid transparent;
 }
 
 .banner::before {

@@ -788,6 +788,11 @@ section {
         background-color: #fff;
         cursor          : pointer;
         padding         : 10px 25px;
+        transition      : background-color, color .6s;
+    }
+
+    .main__btn:hover {
+        border: 1px solid transparent;
     }
 
     &::before {
